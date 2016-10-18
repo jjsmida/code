@@ -25,6 +25,7 @@ def mthread(ip):
 	#no greedy
 	#result = re.sub(r'1\sservice\sunrecognized.*?Service\sInfo', '', result, flags=re.S)
 	#result = re.sub(r'services\sunrecognized.*?Service\sInfo', '', result, flags=re.S)
+	
 	result = re.sub(r'^SF.*', '', result, flags=re.M)
 
 	cmd = 'echo "'+result+'" | egrep -i "Nmap\sscan\sreport|redis"'
