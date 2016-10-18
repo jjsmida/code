@@ -20,6 +20,8 @@ using System.Security.Cryptography;
 //composer中 重放请求
 //右键重放时，修改一次，需要重放两次，第二次才有效
 //composer中发送一次 就可以设置或清空变量值
+//http请求头中apisecret: example 取消自动签名，工具栏取消启用也可以取消自动签名
+
  
 [assembly: Fiddler.RequiredVersion("2.3.9.0")]
 [assembly: AssemblyVersion("1.0.1.0")]
