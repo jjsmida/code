@@ -7,7 +7,7 @@ python redis.py -h ip [-p port] -s [ssh_port]
 import os
 import sys
 import getopt
-
+import time
 
 
 def main(ip, port, ssh):
@@ -19,7 +19,7 @@ def main(ip, port, ssh):
 	if not os.path.exists(rsa):
 		cmd = 'ssh-keygen -t rsa -P \'\' -f '+rsa
 		foutput = os.popen(cmd)
-
+		time.sleep(10)
 		cmd = '(echo -e "\n\n";cat '+rsa_pub+';echo -e "\n\n")>'+rsa_pub_f
 		foutput = os.popen(cmd)
 
