@@ -47,6 +47,8 @@ def main():
 			cmd = 'adb shell grep -i '+ port +' /proc/net/tcp'
 		foutput = os.popen(cmd)
 		tmpout = foutput.read()
+		if not tmpout:
+			continue
 		
 		uid = tmpout.split()[7][2:]
 		if not uid:
